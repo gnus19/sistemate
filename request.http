@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000/api/issues
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/1
+
+###
+
+POST {{baseUrl}}
+
+{
+    "title": "New title",
+    "description": "new issue description"
+}
+
+###
+
+PATCH {{baseUrl}}/0
+
+{
+    "title": "Patched title",
+    "description": "Patched description",
+    "status": "IN_PROGRESS"
+}
+
+###
+
+DELETE {{baseUrl}}/2
