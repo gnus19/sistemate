@@ -23,12 +23,13 @@ function App() {
 
   const addNewIssue = () => {
     const newLsit = [...issueList];
-    setIssueList(newLsit.push({
+    newLsit.push({
       id,
       title: newTitle,
       description: newDescription,
       status: "OPEN"
-    }));
+    })
+    setIssueList(newLsit);
     setNewTitle("");
     setNewDescription("");
     setId(id+1)
